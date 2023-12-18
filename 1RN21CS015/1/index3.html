@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Angular Program</title>
+    <script src="index.js"></script>
+</head>
+<body ng-app = "" ng-init = "person = [{name:'xyz', age:25},{name:'abc', age:30}]">
+    {{person}}
+    <br>
+    <!-- {{person.name}}
+    <br>
+    {{person.age}} -->
+    
+    <h1 ng-repeat = "i in person">{{i.name}}, {{i.age}}</h1>
+    
+</body>
+</html>

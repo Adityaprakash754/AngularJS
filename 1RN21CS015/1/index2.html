@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Angular Program</title>
+    <script src="index.js"></script>
+</head>
+<body ng-app = "" ng-init = "a = [1,2,3,4,5]; a.push(3); a.pop(); a.shift(); a.unshift(6)">
+
+    {{a}}
+    <br>
+    {{a[0]}}
+    <br> <br>
+
+    <p ng-repeat = "i in a">{{i*2}}</p>
+
+    
+</body>
+</html>
