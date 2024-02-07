@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+
+    <script src = "anjs.js"></script>
+</head>
+<script>
+    var app = angular.module("LoginApp",[]);
+    app.controller("Loginctrl", function($scope){
+        $scope.login = function(){
+            if ($scope.name == 'ram' && $scope.pwd == 'ram'){
+                alert("Login Successful")
+            } else {
+                alert("Login UnSuccessful")
+            }
+        }
+    })
+</script>
+<body ng-app ="LoginApp" ng-controller = "Loginctrl" >
+    <form >
+        Enter the username:
+        <input type="text" ng-model="name" required> 
+        <br>
+        Enter Password:
+        <input type="password" ng-model="pwd" required>
+        <br>
+        <button type = "submit" ng-click="login()">Login</button>
+    </form>
+</body>
+</html>

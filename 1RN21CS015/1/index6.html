@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+
+    <script src = "anjs.js"></script>
+</head>
+<script>
+    var app = angular.module("UpdateDet",[]);
+
+    app.controller("Updatectrl", function($scope){
+        $scope.emp = [];
+        $scope.Insert = function(name,sal){
+            $scope.emp.push({name:$scope.name,sal:$scope.sal})
+        }
+        $scope.Update = function(name,sal){
+            var newEmp = {name:$scope.name,sal:$scope.sal};
+            $scope.emp.forEach((emp) => {
+                if(emp.name == name){
+                    $scope.emp.splice($index,1,newEmp)
+                }
+            })
+        }
+    })
+</script>
+<body>
+    
+</body>
+</html>
