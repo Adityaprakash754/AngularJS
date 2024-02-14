@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ArrayManipulation</title>
+    <script src = "lib.js"></script>
+</head>
+
+<body ng-app = "ArrManApp" ng-controller = "Myctrl">
+
+        <script>
+                var app = angular.module("ArrManApp",[]);
+                app.controller("Myctrl",function($scope){
+                    $scope.items = ['item1','item2','item3','item4'];
+                });
+            
+                Items:
+                <ul>
+                    <li ng-repeat = "item in items">
+                        {{item}}
+                    </li>
+                </ul>
+            
+                Count:
+                {{$scope.items.length}}
+            </script>
+
+</body>
+</html>
